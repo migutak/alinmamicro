@@ -9,6 +9,7 @@ RUN rm -f oracle-instantclient19.6*.rpm && apt-get -y autoremove && apt-get -y c
 
 WORKDIR /alinmamicro
 ADD . /alinmamicro/
+RUN npm install --production
 
 EXPOSE 3500
 CMD exec node .
